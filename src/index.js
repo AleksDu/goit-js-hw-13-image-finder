@@ -23,10 +23,11 @@ refs.loadMore.addEventListener("click", onLoadMore);
 
 async function onSearch(e) {
   e.preventDefault();
-  getPictures.query = e.currentTarget.elements.query.value
-  if (getPictures.query = '') {
-    'write anything'
-  }  refs.loadMore.style.visibility = "hidden";
+   getPictures.query = e.currentTarget.elements.query.value;
+   if (getPictures.query === '') {
+    return alert('write something');
+  }
+   refs.loadMore.style.visibility = "hidden";
   if (!e.currentTarget.elements.query.value.trim()) {
     return;
   }
